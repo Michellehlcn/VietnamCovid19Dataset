@@ -260,7 +260,7 @@
 
 					<div class="form-popup" id="myForm">
   					<form action="mailto:michellehlcn.au@gmail.com" class="form-container">
-    				<h1>Login</h1>
+    				<h1>Feedback</h1>
 
    					 <label for="Name"><b>Name</b></label>
    					 <input type="text" placeholder="Enter Name" name="name" required>
