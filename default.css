@@ -219,3 +219,30 @@ column-width: 40%;
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+#localChartWrapper{
+	height:  400px;
+	overflow-y: auto;
+}
+
+.localchartContainer{
+	position: relative;	
+}
+
+#myLocalChart{
+	
+	color: #004b6b;
+	font-weight:  700;
+	font-size: 18px;
+	width:100%; 	
+	height: 1300px; 
+	display: block; 
+
+}
+
+#chart{
+	color: #004b6b;
+	font-weight:  700;
+	font-size: 18px;
+	height:100; 
+	width:100%;
+}
