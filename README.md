@@ -50,7 +50,7 @@
 						Dataset
 					</h2>
 					<hr>
-						<h1>04/08/2021</h1>
+						<h1>07/08/2021</h1>
 					</p>
 					<p>Data Last updated</p>
 					</div>
@@ -73,7 +73,7 @@
 				<div class="card card-body h-100">
 					<h5>New Cases/ Nhiễm</h5>
 					<hr>
-					<h1 style="color: #8a0303;">7,623 </h1>
+					<h1 style="color: #8a0303;">7,334 </h1>
 				</div>
 			</div>
 
@@ -81,7 +81,7 @@
 				<div class="card card-body h-100">
 					<h5>Local Acquired/ Ca trong nước</h5>
 					<hr>
-					<h1 style="color: #8a0303;">7,618</h1>
+					<h1 style="color: #8a0303;">7,333</h1>
 				</div>
 			</div>
 
@@ -89,7 +89,7 @@
 				<div class="card card-body h-100">
 					<h5>Oversea Acquired/ Ca nhập cảnh</h5>
 					<hr>
-					<h1 style="color: #8a0303;">05</h1>
+					<h1 style="color: #8a0303;">01</h1>
 				</div>
 			</div>
 		</div>
@@ -100,7 +100,7 @@
 				<div class="card card-body h-100">
 					<h5>Confirmed Cases/ Tổng nhiễm</h5>
 					<hr>
-					<h1 style="color: #8a0303;">177,813</h1>
+					<h1 style="color: #8a0303;">200,715</h1>
 				</div>
 			</div>
 
@@ -108,7 +108,7 @@
 				<div class="card card-body h-100">
 					<h5>Total Local Cases/ Trong nước</h5>
 					<hr>
-					<h1 style="color: #8a0303;">175,484</h1>
+					<h1 style="color: #8a0303;">198,376</h1>
 				</div>
 			</div>
 
@@ -116,7 +116,7 @@
 				<div class="card card-body h-100">
 					<h5>Total Oversea Cases/ Nhập cảnh</h5>
 					<hr>
-					<h1 style="color: #8a0303;">2,329</h1>
+					<h1 style="color: #8a0303;">2,339</h1>
 				</div>
 			</div>
 		</div>
@@ -128,7 +128,7 @@
 				<div class="card card-body h-100">
 					<h5>Deceased/ Tử vong</h5>
 					<hr>
-					<h1 style="color: #8a0303;">2,327</h1>
+					<h1 style="color: #8a0303;">3,016</h1>
 				</div>
 			</div>
 
@@ -136,7 +136,7 @@
 				<div class="card card-body h-100">
 					<h5>Recoveries/ Khỏi</h5>
 					<hr>
-					<h1 style="color:#004b6b">54,332</h1>
+					<h1 style="color:#004b6b">66,637</h1>
 				</div>
 			</div>
 
@@ -144,7 +144,7 @@
 				<div class="card card-body h-100">
 					<h5>Active Cases/ Đang điều trị</h5>
 					<hr>
-					<h1 style="color: #8a0303;">121,150</h1>
+					<h1 style="color: #8a0303;">131,058</h1>
 					
 				</div>
 			</div>
