@@ -200,7 +200,12 @@
 					<h5>Vaccines Administered</h5>
 				<hr>
 				<iframe width="100%" height="530" src="https://datastudio.google.com/embed/reporting/5b0018e5-3507-4a88-8e8f-ebf43d51b9b7/page/p_1j01cg42lc" frameborder="0"  style="border:0" allowfullscreen Distribute content evenly></iframe>
-				<p style="font-size: 9px;">Source: Github JHU EDU - You can access the raw data from here: click More options and select Export.</p> 
+				<div class="chart" >
+ 					<canvas id="myChart"></canvas>
+				</div>
+				<br>
+				<p style="font-size: 9px;">Source: Github JHU CSSE - You can access the raw data from here: click More options and select Export.</p> 
+				<p style="font-size: 9px;">** If you can't get the status of the table, Please refresh the page and try again.</p>
 				
 
 				</div>
@@ -224,6 +229,36 @@
 	
 	
 	<br>
+
+	<section class="s1">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card card-body h-100">
+					<h5>Detailed Vaccine Administration per State/Province</h5>
+
+					<hr>
+					
+						<p style="font-size: 12px;">Total number of people aged over 18 who received at least one vaccine dose, divided by the total population of the state,province/ Tỷ lệ đã tiêm ít nhất 1 mũi/ dân số (>= 18 tuổi)</p>
+						<p style="font-size: 12px; font-style:  italic">**Currently there is a limit on the data reported by the Ministry Of Health as there is no breakdown of doses administered by first and second doses. A person is considered partly vaccinated if they have received only one dose of a 2-dose vaccine protocol. A person is considered fully vaccinated if they have received a single-dose vaccine or both doses of a two-dose vaccine. If you find any better source of information, I appreciate if you can tip me off. </p>
+						
+					<div id="localChartWrapper">
+						<div class="localChartContainer">
+ 						 <canvas id="myLocalChart" ></canvas>
+						</div>
+					</div>
+					<br>
+					<p style="font-size: 9px;">Source: Population and vaccination data per Province/State via tiemchungcovid19.gov.vn</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<br>
+	
+
+
+
 	<section class="s1">
 		<div class="container">
 		<div class="row" >
@@ -391,6 +426,241 @@ $(function() {
   document.getElementById("myForm").style.display = "none";
 }
 	</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script>
+
+function BuildChart(labels, values, chartTitle) {
+  var data = {
+    labels: labels,
+    datasets: [{
+      label: chartTitle, // Name the series
+      data: values,
+      backgroundColor: 
+      ['rgb(127, 179, 201)',
+        'rgb(0, 75, 107)',
+      
+      ],
+    }],
+  };
+
+  var ctx = document.getElementById("myChart").getContext('2d');
+  
+  var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: data,
+    options: {
+
+      responsive: true, // Instruct chart js to respond nicely.
+      maintainAspectRatio: false, // Add to prevent default behavior of full-width/height 
+      scales: {
+        xAxes: [{
+          
+            display: true,
+            stacked: true,
+            labelString: '%',
+            ticks:{
+            	beginAtZero: true,
+            	min:0,
+            	max:100
+
+            }
+          
+        }],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            stacked: true,
+            labelString: ''
+          }
+        }]
+      },
+    }
+  });
+
+  return myChart;
+}
+</script>
+
+<script>
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var json = JSON.parse(this.response);
+    console.log(json);
+
+  // Map JSON labels  back to values array
+  var labels = json.feed.entry.map(function (e) {
+    return e.gsx$_cn6ca.$t;
+  });
+      
+  // Map JSON values back to values array
+  var values = json.feed.entry.map(function (e) {
+    return e.gsx$_cokwr.$t;
+  });
+
+  BuildChart(labels, values, "% of Population 18+ Vaccinated");
+  }
+};
+xhttp.open("GET", "https://spreadsheets.google.com/feeds/list/12yj7oe5HglqeG3rXpFWQAILYVxg7FLXdeYDVG_RQ36E/5/public/values?alt=json", false);
+
+
+xhttp.send();
+</script>
+
+<script>
+
+function BuildChart1(labels, values, chartTitle) {
+  var data = {
+    labels: labels,
+    datasets: [{
+      label: chartTitle, // Name the series
+      data: values,
+      backgroundColor: 
+      ['rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+      'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+        'rgb(0, 75, 107)',
+      ],
+    }],
+  };
+
+  var ctx1 = document.getElementById("myLocalChart").getContext('2d');
+  
+  var myLocalChart = new Chart(ctx1, {
+    type: 'horizontalBar',
+    data: data,
+    options: {
+
+      responsive: true, // Instruct chart js to respond nicely.
+      maintainAspectRatio: false, // Add to prevent default behavior of full-width/height 
+      scales: {
+        xAxes: [{
+          
+            display: true,
+            stacked: true,
+            labelString: '%',
+            scrollbar: {
+            enabled: true},
+            ticks:{
+            	beginAtZero: true,
+            	min:0,
+            	max:100
+
+            }
+          
+        }],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            stacked: true,
+            labelString: 'State'
+          }
+        }]
+      },
+    }
+  });
+
+  return myLocalChart;
+}
+</script>
+<script>
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var json = JSON.parse(this.response);
+    console.log(json);
+
+  // Map JSON labels  back to values array
+  var labels = json.feed.entry.map(function (e) {
+    return e.gsx$_cn6ca.$t;
+  });
+      
+  // Map JSON values back to values array
+  var values = json.feed.entry.map(function (e) {
+    return e.gsx$_cokwr.$t;
+  });
+
+  BuildChart1(labels, values, "% of Population 18+ Vaccinated Received At Least One Dose");
+  }
+};
+xhttp.open("GET", "https://spreadsheets.google.com/feeds/list/12yj7oe5HglqeG3rXpFWQAILYVxg7FLXdeYDVG_RQ36E/4/public/values?alt=json", false);
+
+
+xhttp.send();
+</script>
+
+
+<script>
+function calcHeight (numOfBars) {
+            var maxHeightOfChart = 250;
+            var minHeight = 40; //setting the min height of the bar + margin between
+            var chartHeight = minHeight * numOfBars > maxHeightOfChart ? minHeight * numOfBars : maxHeightOfChart;
+            document.getElementById("localChart").style.height = chartHeight.toString()+"px";
+    }
+</script>
 
 </body>
 </html>
