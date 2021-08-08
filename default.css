@@ -225,7 +225,7 @@ column-width: 40%;
 }
 
 .localchartContainer{
-	position: relative;	
+	position: absolute;	
 }
 
 #myLocalChart{
