@@ -34,6 +34,8 @@ thead,tbody{
 }
 th{
 	white-space: nowrap;
+	background-color:#004b6b;
+	color:white;
 }
 
 tr {
