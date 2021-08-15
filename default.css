@@ -191,3 +191,27 @@ column-width: 40%;
 	height:100; 
 	width:100%;
 }
+
+#prediction {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  height:  200px;
+  
+}
+
+#prediction td, #prediction th {
+  border: no;
+  padding: 8px;
+}
+
+#prediction tr:nth-child(even){background-color: #f2f2f2;}
+
+#prediction tr:hover {background-color: #ddd;}
+
+#prediction th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #004b6b;
+  color: white;
