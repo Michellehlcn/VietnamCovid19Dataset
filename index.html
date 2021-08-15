@@ -234,11 +234,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card card-body h-100">
-				
-
-
-<table id="prediction">
-  <h5>Vaccination</h5>
+				<table id="prediction">
+ 					 <h5>Vaccination</h5>
 					<hr>
 					<h7>Days until % of first & second doses 18+/ Số ngày theo tỷ lệ tiêm mũi 1&2 đạt % dân số >18 tuổi </h7>
 					<br>
@@ -562,7 +559,32 @@ function BuildChart1(labels, values, chartTitle) {
   return myLocalChart;
 }
 </script>
+<script>
 
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var json = JSON.parse(this.response);
+    console.log(json);
+
+  // Map JSON labels  back to values array
+  var labels = json.feed.entry.map(function (e) {
+    return e.gsx$_cn6ca.$t;
+  });
+      
+  // Map JSON values back to values array
+  var values = json.feed.entry.map(function (e) {
+    return e.gsx$_cokwr.$t;
+  });
+
+  BuildChart1(labels, values, "% of Population 18+ Vaccinated Received At Least One Dose");
+  }
+};
+xhttp.open("GET", "https://spreadsheets.google.com/feeds/list/12yj7oe5HglqeG3rXpFWQAILYVxg7FLXdeYDVG_RQ36E/4/public/values?alt=json", false);
+
+
+xhttp.send();
+</script>
 
 </body>
 </html>
