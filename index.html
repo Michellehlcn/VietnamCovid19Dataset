@@ -235,23 +235,33 @@
 			<div class="col-md-12">
 				<div class="card card-body h-100">
 				<table class="table1 table-striped">
-					<h5>Vaccination</h5>
+					<table id="prediction">
+  <h5>Vaccination</h5>
 					<hr>
 					<h7>Days until % of first & second doses 18+/ Số ngày theo tỷ lệ tiêm mũi 1&2 đạt % dân số >18 tuổi </h7>
 					<br>
-						<thead>
-							<tr style="background-color:#004b6b;
-  color: white;">
-								<th></th>
-								<th>7 Day Avg.</th>
-								<th> 30%</th>
-								<th>50%</th>
-								<th >70%</th>
-								
-							</tr>
-						</thead>
-						<tbody id="demo1" style="height:auto; text-align:left" ></tbody>
-					</table>
+  <tr>
+    <th></th>
+    <th>7 Day Avg.</th>
+    <th>30%</th>
+ 	<th>50%</th>
+	<th>70%</th>
+  </tr>
+  <tr>
+    <td>First Dose 18+</td>
+    <td>689,075</td>
+    <td>12 days</td>
+    <td>32 days</td>
+    <td>52 days</td>
+  </tr>
+   <tr>
+    <td>Second Dose 18+</td>
+    <td>53,119</td>
+     <td>367 days</td>
+    <td>626 days</td>
+    <td>885 days</td>
+  </tr>
+</table>
 					<br>
 					<p style="font-size: 9px;">Based on the current 7-day average of first and second doses</p>
 				</div>
@@ -436,16 +446,7 @@ $(function() {
     </script>
 
 
-    <script>function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-			function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-	</script>
-
-
+    
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 
@@ -564,99 +565,7 @@ function BuildChart1(labels, values, chartTitle) {
   return myLocalChart;
 }
 </script>
-<script>
 
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var json = JSON.parse(this.response);
-    console.log(json);
-
-  // Map JSON labels  back to values array
-  var labels = json.feed.entry.map(function (e) {
-    return e.gsx$_cn6ca.$t;
-  });
-      
-  // Map JSON values back to values array
-  var values = json.feed.entry.map(function (e) {
-    return e.gsx$_cokwr.$t;
-  });
-
-  BuildChart1(labels, values, "% of Population 18+ Vaccinated Received At Least One Dose");
-  }
-};
-xhttp.open("GET", "https://spreadsheets.google.com/feeds/list/12yj7oe5HglqeG3rXpFWQAILYVxg7FLXdeYDVG_RQ36E/4/public/values?alt=json", false);
-
-
-xhttp.send();
-</script>
-
-<script type="text/javascript">
-let xmlhttp1 = new XMLHttpRequest();
-xmlhttp1.onreadystatechange = function () {
-	if (this.readyState == 4 && this.status ==200) {
-		let data1 = JSON.parse(this.responseText).feed.entry;
-
-
-		let i;
-		for (i= 0; i< data1.length; i++) {
-			let  dose = data1[i]["gsx$_cn6ca"]["$t"];
-			let average_seven_day= data1[i]["gsx$_cokwr"]["$t"];
-			let thirty_percent = data1[i]["gsx$_cpzh4"]["$t"];
-			let  fifty_percent= data1[i]["gsx$_cre1l"]["$t"];
-			let seventy_percent = data1[i]["gsx$_chk2m"]["$t"];
-
-			
-			document.getElementById('demo1').innerHTML +=
-			"<tr>" +
-			"<td>" +
-			dose +
-			"</td>" +
-			"<td>" +
-			average_seven_day +
-			"</td>" +
-			"<td>" +
-			thirty_percent +
-			"</td>" +
-			"<td>" +
-			fifty_percent +
-			"</td>" +
-			"<td>" +
-			seventy_percent +
-			"</td>" +
-			"</tr>";
-
-		}
-	}
-};
-
-xmlhttp1.open(
-	"GET",
-	"https://spreadsheets.google.com/feeds/list/12yj7oe5HglqeG3rXpFWQAILYVxg7FLXdeYDVG_RQ36E/6/public/values?alt=json",
-	true 
-);
-
-xmlhttp1.send();
-
-
-</script>
-<script type="text/javascript">
-$(function() {
-	$('.table1 table-striped> tr').clone().appendTo('.table1 table-striped tbody').addClass('hidden-to-set-col-widths');
-
-  for (var i = 0; i < 20; i++) {
-    var a = Math.floor(10 * Math.random());
-    var b = Math.floor(10 * Math.random());
-
-    var row = $("<tr>").append($("<td>").html(a + " + " + b + " ="))
-      .append($("<td>").html(a + b))
-      .append($("<td>").html('blah'))
-      .append($("<td>").html('derp'));
-    $("tbody").append(row);
-  }
-});
-
-</script>
 
 </body>
 </html>
