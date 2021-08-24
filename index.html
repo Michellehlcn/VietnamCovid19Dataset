@@ -710,6 +710,10 @@ new Chart(document.getElementById("bar-chart-grouped1"), {
       ]
     },
     options: {
+	    title: {
+        display: true,
+        text: 'Percentage of people aged 18 and over vaccinated against COVID-19',
+      },
     	responsive: true,
     	maintainAspectRatio: true,
 
@@ -722,10 +726,7 @@ new Chart(document.getElementById("bar-chart-grouped1"), {
       	min: 0,
         max: 100,
       	}}],
-      title: {
-        display: true,
-        text: 'Percentage of people aged 18 and over vaccinated against COVID-19'
-      }
+      
     }
 }});
 </script>
