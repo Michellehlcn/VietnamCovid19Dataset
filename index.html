@@ -253,21 +253,22 @@
   							
  								 <tr>
    									<td>First Dose 18+</td>
-    								<td>313,758</td>
-    								<td>17 days</td>
-   									<td>61 days</td>
-    								<td>105 days</td>
+    								<td>320,398</td>
+    								<td>16 days</td>
+   									<td>59 days</td>
+    								<td>102 days</td>
   							</tr>
    							<tr>
     								<td>Second Dose 18+</td>
-    								<td>62,224</td>
-    							 	<td>303 days</td>
-    								<td>525 days</td>
-    								<td>746 days</td>
+    								<td>65,011</td>
+    							 	<td>290 days</td>
+    								<td>501 days</td>
+    								<td>713 days</td>
   							</tr>
   						</tbody>
 						</table>
 						<br>
+						<canvas id="bar-chart-grouped1" width="1200" height="120"></canvas>
 						<p style="font-size: 9px;">Based on the current 7-day average of first and second doses</p>
 					</div>
 				</div>
@@ -689,9 +690,43 @@ new Chart(document.getElementById("bar-chart-grouped"), {
     }
 });
 </script>
+<script>
+new Chart(document.getElementById("bar-chart-grouped1"), {
+    type: 'horizontalBar',
+    data: {
+      labels: ["National Rate"],
+      datasets: [
+        {
+          label: "One Dose",
+          backgroundColor: "#3e95cd",
+          data: [22.55]
+        }, {
+          label: "Both Doses",
+          backgroundColor: "#8e5ea2",
+          data: [2.66]
+        }
+      ]
+    },
+    options: {
+    	responsive: true,
+    	maintainAspectRatio: true,
 
-
-
+    	scales: {
+    		xAxes: [{
+      	
+      	labelString: '%',
+      	ticks: {
+      	
+      	min: 0,
+        max: 100,
+      	}}],
+      title: {
+        display: true,
+        text: 'Percentage of people aged 18 and over vaccinated against COVID-19'
+      }
+    }
+}});
+</script>
 
 
 </body>
