@@ -696,6 +696,10 @@ new Chart(document.getElementById("bar-chart-grouped"), {
 new Chart(document.getElementById("bar-chart-grouped1"), {
     type: 'horizontalBar',
     data: {
+	     title: {
+        display: true,
+        text: 'Percentage of people aged 18 and over vaccinated against COVID-19',
+      },
       labels: ["National Rate"],
       datasets: [
         {
@@ -710,10 +714,7 @@ new Chart(document.getElementById("bar-chart-grouped1"), {
       ]
     },
     options: {
-	    title: {
-        display: true,
-        text: 'Percentage of people aged 18 and over vaccinated against COVID-19',
-      },
+	   
     	responsive: true,
     	maintainAspectRatio: true,
 
