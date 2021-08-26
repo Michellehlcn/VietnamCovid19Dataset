@@ -16,6 +16,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="https://www.google.com/jsapi"></script>
+
 </head>
 <body>
 	
@@ -217,7 +220,7 @@
 				<div class="card card-body h-100">
 					<h5>Vaccine supplies/Nguồn vaccine</h5>
 					<hr>
-					<p><div id="piechart"></div>
+					<p><div id="myVaccineChart"/>
 					</p>
 					<p style="font-size: 9px;">Source: "Total Doses Received" - Phanxuandung.notion.site </p>
 					<p style="font-size: 9px;">"NANOCOVAX is the Vietnam's homegrown COVID-19 vaccine candidate researched and developed by Nanogen based on recombinant DNA/protein technology. It has not been approved and is under the third-phase clinical trial, which started on June 11, 2021."</p>
@@ -426,40 +429,35 @@ $(function() {
 
 </script>
 
- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+ <script>
+google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
+    function drawChart() {
+var data = google.visualization.arrayToDataTable([
+        ['Source', 'Donation', 'Purchase', 'LocalProduction','Awaiting',
+         { role: 'style' }, { role: 'annotation' } ],
+        ['AstraZeneca', 7590494, 6709400, 0, 61837706,'color: #e5e4e2', ''],
+        ['Moderna', 5000000, 0, 0, 0, 'color: #e5e4e2',''],
+        ['Pfizer', 802620, 746000, 0, 70517250,'color: #e5e4e2', ''],
+        ['Sinopharm(VeroCell)', 700000, 1000000, 0, 6000000,'color: #e5e4e2', ''],
+        ['SputnikV', 2000, 0, 10000, 40000000,'color: #e5e4e2', ''],
+        ['Covaxin', 0, 0, 0, 15000000,'color: #e5e4e2', ''],
+      ]);
 
-        var data = google.visualization.arrayToDataTable([
-          ['Source', 'Doses'],
-          ['AstraZeneca_Japan_Donation', 3000000],
-          ['AstraZeneca_COVAX_Donation', 3673600],
-          ['AstraZeneca_Purchase', 3759900],
-          ['AstraZeneca_TheUK_Donation', 415000],
-          ['Moderna_TheUS_Donation', 5000000],
-          ['Pfizer_Purchase', 194000],
-          ['Sputnik V_Russia_Donation', 2000],
-          ['Sinopharm_China_Donation', 500000],
-          ['Sinopharm_China_Purchase', 1000000],
-        ]);
-
-        var options = {
-          title: '',
-          legend: 'none',
-          chartArea:{left:0,top:0,width:"100%"},
-        
-
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
-    </script>
-
+      var options = {
+    
+        width: 600,
+        height: 400,
+        legend: { position: 'none', maxLines: 3 },
+        bar: { groupWidth: '75%' },
+        isStacked: true
+      };
+ var chart = new google.visualization.BarChart(document.getElementById('myVaccineChart'));
+      chart.draw(data, options);
+    }
+</script>
+    
 
     
 
