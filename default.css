@@ -194,30 +194,18 @@ column-width: 40%;
 	width:100%;
 }
 
-#prediction {
+
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+#percentage{
+	 background-color: #004b6b;
+  font-weight: 14;
+  color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-
-
-  
-  
 }
 
-#prediction td, #prediction th {
-  border: no;
-  padding: 8px;
-}
 
-#prediction tr:nth-child(even){background-color: #f2f2f2;}
-
-#prediction tr:hover {background-color: #ddd;}
-
-#prediction th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #004b6b;
-  color: white;
-
-}
