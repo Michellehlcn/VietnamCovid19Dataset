@@ -211,10 +211,9 @@ column-width: 40%;
 
 ul.checkmark li{
   font-size: 16px; 
-  margin-bottom: 1em;
+
   list-style-type: none;
-  padding: .25em 0 0 2.5em;
-	position: relative;}
+ }
 
  ul.checkmark li:before{
     content: " ";
