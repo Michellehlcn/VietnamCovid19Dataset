@@ -211,7 +211,7 @@ column-width: 40%;
 
 ul.checkmark li{
   font-size: 16px; 
-
+position:absolute;
   list-style-type: none;
  }
 
