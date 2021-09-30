@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TKWVMBKPCQ"></script>
 	<script>
   window.dataLayer = window.dataLayer || [];
@@ -9,21 +11,78 @@
 
   gtag('config', 'G-TKWVMBKPCQ');
 	</script>
+
+
+
 	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>VietNam | Covid19 - Dataset</title>
 	<link href='default.css' rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="preconnect" href="https://fonts.googleapis.com"> 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+	
+
 	<script src="https://www.gstatic.com/charts/loader.js"></script>
 	<script src="https://www.google.com/jsapi"></script>
 
 </head>
-<body>
+
+
+<!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom fonts for this template -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+<body id="page-top">
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+    	 <a class="js-scroll-trigger" href="#page-top">
+      
+
+      </a>
+      
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#description">Intro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#case">Covid Cases</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#vaccine">Vaccine Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#vaccinesupplies">Vaccine Supplies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- =======================  LANDING SECTION ======================= -->
 	
-	<section class="s1">	
+	<section class="s1 textlanding">	
 			<div class="header" >
 				<div class="header-overlay"></div>
 				<div class="header-text">
@@ -35,14 +94,12 @@
 			</div>
 	</section>
 
-	<section class="s1">
-			<div class="description">
-				<div class="description-overlay">
-				<div class="container">
 
-					<div class="wrapper">
-					<div class="left-column">
-				
+<!-- =======================  DESCRIPTION SECTION ======================= -->
+	<section id="description" class="description description-overlay">
+				<div class="container ">
+					<div class="row">
+					<div class="col-lg-8 ">				
 					<br>
 					<h4>COVID19 VIETNAM/ COVID-19 tại Việt Nam</h4>
 					<p>This page provides a series of dashboards providing the latest information on confirmed COVID-19 cases as well as the latest data on vaccination administration.  All data has been provided by the Ministry of Heath.
@@ -54,7 +111,7 @@
 					<br>
 					</div>
 
-					<div class="right-column">
+					<div class="col-lg-4 text-center ">		
 					<p>
 					<br>
 					<br>	
@@ -73,13 +130,10 @@
 			</div>
 		</section>
 
-	<section class="s1">
+<br>
+<!-- =======================  DASHBOARD SECTION ======================= -->
+	<section id="dashboard" class="dashboard">
 		<div class="container">
-
-
-	<br>
-
-
 		<div class="row">
 			<div class="col-md-4">
 				<div class="card card-body h-100">
@@ -136,9 +190,9 @@
 		</div>
 		<br>
 
+<!-- =======================  CHART SECTION - COVIDCASES======================= -->
 
-
-		<div class="row">
+		<div class="row" id="case">
 			<div class="col-md-8">
 				<div class="card card-body h-100">
 					<h5>New Cases per Province/State/ Ca nhiễm theo tỉnh thành</h5>
@@ -162,10 +216,10 @@
 				</div>
 			</div>
 		</div>
-
+<!-- =======================  VACCINE SECTION ======================= -->
 
 		<br>
-		<div class="row">
+		<div class="row" id="vaccine">
 			<div class="col-md-8">
 				<div class="card card-body h-100" >
 					<h5>Vaccine Administered/ Tổng số người đã tiêm vaccine</h5>
@@ -182,7 +236,7 @@
 		</div>
 
 
-
+<!-- =======================  VACCINE SECTION - PRECDICTION TABLE ======================= -->
 			<div class="col-md-4">
 				<div class="card card-body h-100">
 					<h5>Vaccination Target</h5>
@@ -274,7 +328,10 @@
 	<br>
 </section>
 
-<section class="s1">
+
+<!-- =======================  VACCINE SUPPLY SECTION ======================= -->
+
+<section class="s1" id="vaccinesupplies">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -302,7 +359,7 @@
 </section>
 <br>
 	
-
+<!-- =======================  VACCINE PER STATE - BARCHART SECTION ======================= -->
 	<section class="s1">
 	<div class="container">
 		<div class="row">
@@ -332,6 +389,9 @@
 	</div>
 </section>
 <br>
+
+
+<!-- =======================  VACCINE PER STATE - SEARCHABLE CHART SECTION ======================= -->
 	<section class="s1">
 		<div class="container">
 			<div class="row">
@@ -363,7 +423,7 @@
 </section>	
 
 
-
+<!-- =======================  CONTACT SECTION ======================= -->
 
 
 	<br>
@@ -411,6 +471,8 @@
 
 
 </section>	
+
+<!-- =======================  COMMENT SECTION ======================= -->
 <section class="s1">
 		<div class="container">
 			<div class="row">
@@ -423,10 +485,10 @@
 	</div>
 </section>
 				
-
+<!-- =======================  JAVASCRIPT SECTION ======================= -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
 
-
+<!-- =======VACCINE SUPPLIES======== -->
  <script>
 google.charts.load('current', {packages: ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
@@ -457,7 +519,7 @@ var data = google.visualization.arrayToDataTable([
     }
 </script>
     
-
+<!-- =======VACCINE PER STATE BARCHART======== -->
     
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
@@ -730,7 +792,7 @@ new Chart(document.getElementById("bar-chart-grouped1"), {
     }
 }});
 </script>
-
+<!-- =======COMMENT DISQUS======== -->
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -750,5 +812,7 @@ new Chart(document.getElementById("bar-chart-grouped1"), {
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <script id="dsq-count-scr" src="//https-michellehlcn-github-io-vietnamcovid19dataset.disqus.com/count.js" async></script>
+
+<!-- =============== -->
 </body>
 </html>
