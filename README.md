@@ -1,6 +1,7 @@
 # VietnamCovid19 Dataset
 
 A website made to track Covid-19 cases and Vaccine Rollout.
+
 *https://michellehlcn.github.io/VietnamCovid19Dataset/*
 
 ## Notes
@@ -20,7 +21,7 @@ This data should be available in machine-readble formats for transparency and to
 **Want to use this in Google Sheets**
 ---
 You can use the =IMPORTDATA() formula:
-=IMPORTDATA("https://github.com/Michellehlcn/VietnamCovid19Dataset/blob/Master/Data_Vaccines.csv")
+>=IMPORTDATA("https://github.com/Michellehlcn/VietnamCovid19Dataset/blob/Master/Data_Vaccines.csv")
 
 
 
