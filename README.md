@@ -1,15 +1,15 @@
 # VietnamCovid19 Dataset
----
+
 A website made to track Covid-19 cases and Vaccine Rollout.
 *[Link] (https://michellehlcn.github.io/VietnamCovid19Dataset/)*
 
 ## Notes
----
+
 **Attribution**
 When using this data extract, I'd appreciate it if you attribute data extraction to myself(michellehlcn) and link to this repository. This will be greatly appreciatedm, but not required.:+1:
 Example:
 
->Source: Vietnam Ministry of Health; Data extracted by [Michellehlcn] (https://github.com/Michellehlcn/VietnamCovid19Dataset)
+>Source: Vietnam Ministry of Health; Data extracted by [Michellehlcn](https://github.com/Michellehlcn/VietnamCovid19Dataset)
 
 **Why did you build this**
 ---
