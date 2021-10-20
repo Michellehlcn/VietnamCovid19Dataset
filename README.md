@@ -4,7 +4,7 @@ A website made to track Covid-19 cases and Vaccine Rollout.
 
 *https://michellehlcn.github.io/VietnamCovid19Dataset/*
 
-## Notes
+
 
 **Attribution**
 ---
