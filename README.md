@@ -7,6 +7,7 @@ A website made to track Covid-19 cases and Vaccine Rollout.
 ## Notes
 
 **Attribution**
+---
 When using this data extract, I'd appreciate it if you attribute data extraction to myself(michellehlcn) and link to this repository. This will be greatly appreciatedm, but not required.:+1:
 * Example:
 
